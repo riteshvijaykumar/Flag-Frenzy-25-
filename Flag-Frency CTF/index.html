@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTF - Flag-Frency</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="title">🚩 Flag-Frency CTF</h1>
+            <p class="subtitle">Capture The Flag Challenge Competition</p>
+            <div class="total-points">Total Points Available: <span class="points-value">1000</span></div>
+        </div>
+    </header>
+
+    <nav class="navigation">
+        <div class="container">
+            <ul class="nav-list">
+                <li><a href="#general">General Skills</a></li>
+                <li><a href="#network">Network Traffic Analysis</a></li>
+                <li><a href="#forensics">Forensics</a></li>
+                <li><a href="#web">Web Exploitation</a></li>
+                <li><a href="#reverse">Reverse Engineering</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="container">
+            <!-- General Skills Section -->
+            <section id="general" class="category-section">
+                <div class="category-header">
+                    <h2>🛠️ General Skills</h2>
+                    <span class="challenge-count">2 Challenges</span>
+                </div>
+                
+                <div class="challenges-grid">
+                    <div class="challenge-card">
+                        <div class="challenge-header">
+                            <h3>Hidden Protocol</h3>
+                            <div class="challenge-meta">
+                                <span class="difficulty easy">Easy</span>
+                                <span class="points">100 pts</span>
+                            </div>
+                        </div>
+                        <div class="challenge-content">
+                            <h4>Problem Description</h4>
+                            <p>During a recent penetration test, you discovered a suspicious binary that appears to implement a custom network protocol. The binary seems to be communicating with an external server using an encrypted channel, but something feels off about the implementation.</p>
+                        </div>
+                    </div>
+
+                    <div class="challenge-card">
+                        <div class="challenge-header">
+                            <h3>Ghost in the Machine</h3>
+                            <div class="challenge-meta">
+                                <span class="difficulty medium">Medium</span>
+                                <span class="points">100 pts</span>
+                            </div>
+                        </div>
+                        <div class="challenge-content">
+                            <h4>Problem Description</h4>
+                            <p>A security researcher discovered a suspicious process running on a compromised system. The process appears to be injecting code into other processes and communicating with a command & control server.</p>
+                            <p>A memory dump was taken, but the malware implemented several anti-forensics techniques.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Network Traffic Analysis Section -->
+            <section id="network" class="category-section">
+                <div class="category-header">
+                    <h2>🌐 Network Traffic Analysis</h2>
+                    <span class="challenge-count">3 Challenges</span>
+                </div>
+                
+                <div class="challenges-grid">
+                    <div class="challenge-card">
+                        <div class="challenge-header">
+                            <h3>traffic.pcapng</h3>
+                            <div class="challenge-meta">
+                                <span class="difficulty medium">Medium</span>
+                                <span class="points">100 pts</span>
+                            </div>
+                        </div>
+                        <div class="challenge-content">
+                            <h4>Description</h4>
+                            <p>The crew sets their sights on an abandoned fertilizer plant, a desolate structure rumored to hold a cache of ammonium nitrate—crucial for their makeshift explosives. Navigating through the plant's crumbling corridors, they reach the main control room where a dusty, outdated PLC still hums faintly with power.</p>
+                            <p>The crew's hackers spring into action, connecting their equipment to the network of the PLC and starting the process of extracting data. They know that finding the password the control device uses to connect to the PLC is key to gaining full access to it.</p>
+                            <p class="hint"><strong>💡 Hint:</strong> The hackers deploy network enumeration tools to scan for active devices on the plant's internal network. Look for the packet that contains the secret information.</p>
+                        </div>
+                    </div>
+
+                    <div class="challenge-card">
+                        <div class="challenge-header">
+                            <h3>Follow The Leader</h3>
+                            <div class="challenge-meta">
+                                <span class="difficulty medium">Medium</span>
+                                <span class="points">100 pts</span>
+                            </div>
+                        </div>
+                        <div class="challenge-content">
+                            <h4>Description</h4>
+                            <p>A suspicious network capture has been intercepted from a possible command-and-control (C2) communication. It seems that someone is "leading" the traffic flow — and the flag is hidden somewhere within the packets they control.</p>
+                            <p>Your mission is to follow the trail of the leader carefully. Analyze the <code>FollowTheLeader.pcap</code> file, reconstruct the communication, and extract the hidden flag buried deep inside the conversation. Pay attention to packet order, sequence, and any unusual patterns.</p>
+                            <p class="hint"><strong>💡 Hint:</strong> Sometimes the leader doesn't speak in plaintext — follow the stream, reassemble the pieces, and the message will reveal itself.</p>
+                        </div>
+                    </div>
+
+                    <div class="challenge-card">
+                        <div class="challenge-header">
+                            <h3>Haystack</h3>
+                            <div class="challenge-meta">
+                                <span class="difficulty hard">Hard</span>
+                                <span class="points">100 pts</span>
+                            </div>
+                        </div>
+                        <div class="challenge-content">
+                            <h4>Description</h4>
+                            <p>You're given a massive network capture filled with ordinary traffic — web browsing, DNS queries, and random noise. But somewhere in this <em>haystack</em> lies the <em>needle</em>: a hidden flag transmitted in a subtle and covert way.</p>
+                            <p>Your task is to sift through the noise, identify the suspicious traffic, and extract the flag. It could be hidden in payloads, headers, or even encoded in an unexpected protocol. Precision and patience will be your best tools.</p>
+                            <p class="hint"><strong>💡 Hint:</strong> Think like an attacker — they hide in plain sight. Filtering, following TCP streams, and looking for anomalies will guide you.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Forensics Section -->
+            <section id="forensics" class="category-section">
+                <div class="category-header">
+                    <h2>🔍 Forensics</h2>
+                    <span class="challenge-count">1 Challenge</span>
+                </div>
+                
+                <div class="challenges-grid">
+                    <div class="challenge-card">
+                        <div class="challenge-header">
+                            <h3>It's Oops PM</h3>
+                            <div class="challenge-meta">
+                                <span class="difficulty hard">Hard</span>
+                                <span class="points">100 pts</span>
+                            </div>
+                        </div>
+                        <div class="challenge-content">
+                            <h4>Description</h4>
+                            <p>With the location of the underground bunker secured, the crew embarks on the next phase of their plan: assessing the feasibility of creating an underground tunnel to bypass the super mutant camp. They secure samples of water, soil, and air near the area.</p>
+                            <p>Scouring the wasteland for salvageable equipment, they stumble upon a dilapidated research facility where they find a cache of environmental sensors. Examining these sensors, the crew discovers they communicate with a satellite and contain a crypto-processor that encrypts their transmissions.</p>
+                            <p>After hand-drawing the diagrams and emulating the silicon chip's logic with VHDL, they uncover what appears to be a backdoor in the embedded logic that only triggers when a specific input is given to the system.</p>
+                            <p><strong>Challenge:</strong> Can you connect to the satellite and activate it?</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Web Exploitation Section -->
+            <section id="web" class="category-section">
+                <div class="category-header">
+                    <h2>🌍 Web Exploitation</h2>
+                    <span class="challenge-count">2 Challenges</span>
+                </div>
+                
+                <div class="challenges-grid">
+                    <div class="challenge-card">
+                        <div class="challenge-header">
+                            <h3>Frog-WAF</h3>
+                            <div class="challenge-meta">
+                                <span class="difficulty hard">Hard</span>
+                                <span class="points">100 pts</span>
+                            </div>
+                        </div>
+                        <div class="challenge-content">
+                            <h4>Description</h4>
+                            <p>Frog-WAF is a hard-difficulty Spring Boot CTF challenge featuring a custom Web Application Firewall. It contains an Expression Language injection vulnerability in the country validator that requires advanced Java reflection techniques to bypass comprehensive input filtering and capture the flag.</p>
+                            <div class="tech-stack">
+                                <span class="tech">Spring Boot</span>
+                                <span class="tech">Java</span>
+                                <span class="tech">WAF Bypass</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="challenge-card">
+                        <div class="challenge-header">
+                            <h3>Project 2</h3>
+                            <div class="challenge-meta">
+                                <span class="difficulty medium">Medium</span>
+                                <span class="points">100 pts</span>
+                            </div>
+                        </div>
+                        <div class="challenge-content">
+                            <h4>Description</h4>
+                            <p>A poorly coded PHP-based shopping website has been deployed, but its login system wasn't built with security in mind. Your mission is to <strong>exploit the vulnerability in the authentication mechanism</strong> and gain unauthorized access.</p>
+                            <p>Once you're in, look around the application — somewhere inside lies the hidden flag waiting to be claimed.</p>
+                            <p class="hint"><strong>💡 Hint:</strong> Sometimes the key to the vault isn't in the password itself… it's in how the system checks it.</p>
+                            <div class="tech-stack">
+                                <span class="tech">PHP</span>
+                                <span class="tech">Authentication Bypass</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Reverse Engineering Section -->
+            <section id="reverse" class="category-section">
+                <div class="category-header">
+                    <h2>🔧 Reverse Engineering</h2>
+                    <span class="challenge-count">2 Challenges</span>
+                </div>
+                
+                <div class="challenges-grid">
+                    <div class="challenge-card">
+                        <div class="challenge-header">
+                            <h3>Flag Casino</h3>
+                            <div class="challenge-meta">
+                                <span class="difficulty medium">Medium</span>
+                                <span class="points">100 pts</span>
+                            </div>
+                        </div>
+                        <div class="challenge-content">
+                            <h4>Description</h4>
+                            <p>The team stumbles into a long-abandoned casino. As you enter, the lights and music whir to life, and a staff of robots begin moving around and offering games, while skeletons of prewar patrons are slumped at slot machines.</p>
+                            <p>A robotic dealer waves you over and promises great wealth if you can win - can you beat the house and gather funds for the mission?</p>
+                        </div>
+                    </div>
+
+                    <div class="challenge-card">
+                        <div class="challenge-header">
+                            <h3>Critical Flight</h3>
+                            <div class="challenge-meta">
+                                <span class="difficulty hard">Hard</span>
+                                <span class="points">100 pts</span>
+                            </div>
+                        </div>
+                        <div class="challenge-content">
+                            <h4>Description</h4>
+                            <p>Your team has assigned you to a mission to investigate the production files of Printed Circuit Boards for irregularities. This is in response to the deployment of nonfunctional DIY drones that keep falling out of the sky.</p>
+                            <p>The team had used a slightly modified version of an open-source flight controller in order to save time, but it appears that someone had sabotaged the design before production.</p>
+                            <p><strong>Challenge:</strong> Can you help identify any suspicious alterations made to the boards?</p>
+                            <div class="tech-stack">
+                                <span class="tech">Hardware</span>
+                                <span class="tech">PCB Analysis</span>
+                                <span class="tech">Flight Controller</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Flag-Frency CTF. Good luck, and may the flags be with you! 🚩</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
